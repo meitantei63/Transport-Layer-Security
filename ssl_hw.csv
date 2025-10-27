@@ -1,0 +1,26 @@
+Subject,Alternatives,Validity Period,Key,Issuer,Signature Algorithm,Trusted by,CIA?,Forward Secrecy? ,Notes,Interesting features,Questions
+chatgpt.com,,"Sat, 27 Sep 2025 01:43:18 UTC to
+Fri, 26 Dec 2025 02:43:16 UTC",EC 256 bits,"WE1 
+AIA: http://i.pki.goog/we1.crt",SHA256withECDSA,"Yes 
+Mozilla  Apple  Android  Java  Windows",yes,Yes,"It’s good that is has certificate transparency. I did notice how, there is no CAA DNS record. The OCSP response may not be trustworthy because under the revocation status, it gave a CRL ERROR: IOException occurred. ",Nothing interesting,None
+www.ebay.com,"cache-dweb-akamai.ebay.com cache-native-akamai.ebay.com, … ","Thu, 17 Jul 2025 00:00:00 UTC to 
+Fri, 17 Jul 2026 23:59:59 UTC",RSA 2048 bits (e 65537),Sectigo Public Server Authentication CA OV R36,SHA256withRSA,"Yes 
+Mozilla  Apple  Android  Java  Windows",yes,Yes,"The domain has a healthy DNS CAA record, the server prefers 128 bit cipher suites for TLS over 256 bit ones, also it has TLS_FALLBACK_SCSV",Nothing interesting ,None
+*.desmos.com,,"Fri, 17 Oct 2025 00:00:00 UTC to Sun, 15 Nov 2026 23:59:59 UTC",RSA 2048 bits (e 65537),Amazon RSA 2048 M01,SHA256withRSA,"Yes 
+Mozilla  Apple  Android  Java  Windows",Yes,yes,"There are still a lot of weak TLS suites on standby for TLS 1.2, No DNS CAA, and the BEAST attack is mitigated server side. ",They might of gotten shut down recently because they use amazon servers. ,None
+github.com,,"Mon, 10 Mar 2025 00:00:00 UTC to  Tue, 10 Mar 2026 23:59:59 UTC ",EC 256 bits,Sectigo RSA Domain Validation Secure Server CA,SHA256withRSA,"Yes 
+Mozilla  Apple  Android  Java  Windows",yes,yes,"Healthy CAA DNS Record, revocation status is clean with lots of issuers, they have even more older TLS Suites then Ebay, and it implements Strict Transport Security. ",Nothing interesting ,None
+pirateship.com,,"Fri, 26 Sep 2025 18:32:06 UTC to Thu, 25 Dec 2025 19:32:03 UTC ",EC 256 bits,WE1,SHA256withECDSA,"Yes 
+Mozilla  Apple  Android  Java  Windows",Yes,yes,"Good DNS CAA, dual evocation information: CRL, OCSP, signature algorithm, has two certificates, ",Very similar configuration,None
+www.linkedin.com,www.linkedin.com linkedin.com rum5.perf.linkedin.com exp4.www.linkedin.com,"Fri, 29 Aug 2025 00:00:00 UTC to Sat, 28 Feb 2026 23:59:59 UTC",RSA 2048 bits (e 65537),DigiCert SHA2 Secure Server CA,SHA256withRSA,"Yes 
+Mozilla  Apple  Android  Java  Windows",yes,yes,"Dual verified revocation information but there is a CLR information error so it may not be completely trustworthy, lots of alternative names. HSTS Preloading
+Not in: Chrome  Edge  Firefox  IE
+",Very similar configuration,None
+www.theplanetstoday.com,,"
+Sat, 11 Oct 2025 09:11:58 UTC to 
+Fri, 09 Jan 2026 09:11:57 UTC ",RSA 4096 bits (e 65537),R12,SHA256withRSA,"Yes 
+Mozilla  Apple  Android  Java  Windows",yes,yes,"No weak tls suites, no DNS CAA, no Strict Transport Security (HSTS)",Very similar configuration,None
+keybr.com,,"Thu, 18 Sep 2025 10:10:32 UTC to Wed, 17 Dec 2025 11:09:00 UTC",RSA 2048 bits (e 65537),WR1,SHA256withRSA,"Yes 
+Mozilla  Apple  Android  Java  Windows",Yes,yes,Similar to pirateship,"(P) This server prefers ChaCha20 suites with clients that don't have AES-NI (e.g., Android devices). It has plenty of TLS algorithms to support multiple device kinds. ",None
+powerthesaurus.org,," Sat, 27 Sep 2025 20:55:11 UTC to Fri, 26 Dec 2025 21:50:40 UTC",RSA 2048 bits (e 65537),WR1,SHA256withRSA,"Yes 
+Mozilla  Apple  Android  Java  Windows",Yes,Yes,"B ranking :/, No DNS CAA, unfortunately supports This server supports TLS 1.0 and TLS 1.1, no Strict Transport Security (HSTS)"," For android, Java 6u45 , IE 8 / XP",How much of a vulnerability is the support for TLS 1.0 and 1.1 and how often have they experienced issues? 
