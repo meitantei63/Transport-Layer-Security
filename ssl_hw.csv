@@ -24,3 +24,5 @@ keybr.com,,"Thu, 18 Sep 2025 10:10:32 UTC to Wed, 17 Dec 2025 11:09:00 UTC",RSA 
 Mozilla  Apple  Android  Java  Windows",Yes,yes,Similar to pirateship,"(P) This server prefers ChaCha20 suites with clients that don't have AES-NI (e.g., Android devices). It has plenty of TLS algorithms to support multiple device kinds. ",None
 powerthesaurus.org,," Sat, 27 Sep 2025 20:55:11 UTC to Fri, 26 Dec 2025 21:50:40 UTC",RSA 2048 bits (e 65537),WR1,SHA256withRSA,"Yes 
 Mozilla  Apple  Android  Java  Windows",Yes,Yes,"B ranking :/, No DNS CAA, unfortunately supports This server supports TLS 1.0 and TLS 1.1, no Strict Transport Security (HSTS)"," For android, Java 6u45 , IE 8 / XP",How much of a vulnerability is the support for TLS 1.0 and 1.1 and how often have they experienced issues? 
+
+Reviewer: Yves Song
